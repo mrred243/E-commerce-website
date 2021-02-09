@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
-import Products from './components/Products/Products.jsx'
+import { Products, Navbar } from './components/index'
+
 const App = () => {
     return (
         <div>
+            <Navbar />
             <Products />
         </div>
     )
