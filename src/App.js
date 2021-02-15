@@ -40,7 +40,6 @@ const App = () => {
         fetchCart();
     }, [])
 
-    console.log(products)
 
     return (
         <Router>
@@ -59,7 +58,7 @@ const App = () => {
                         />
                     </Route>
                     <Route exact path='/checkout'>
-                        <Checkout  />
+                        <Checkout cart={cart}  />
                     </Route>
                 </Switch>
             </div>
