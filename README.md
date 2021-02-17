@@ -3,7 +3,7 @@ This project is an E-commerce website with all function from adding to cart to p
 
 *All products is for demo purpose (please use mock credit card as below to purchase)
 
-<img src="./src/assets/ss.png">
+<img src="./src/assets/ss1.png">
 
 ## Demo
 
