@@ -65,7 +65,6 @@ const App = () => {
 
 
     return (
-        <ThemeProvider>
         <Router>
             <div>
                 <Navbar totalItems={cart.total_items}  />
@@ -92,7 +91,6 @@ const App = () => {
                 </Switch>
             </div>
         </Router>
-        </ThemeProvider>
     )
 }
 
