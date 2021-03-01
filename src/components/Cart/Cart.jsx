@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 
 import useStyles from './styles'
 import CardItem from './CartItem/CartItem'
+import {  Navbar } from '../index'
 
 
-const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
+const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart, totalItems }) => {
     const classes = useStyles();
 
     const EmptyCart =() => (
@@ -38,11 +39,14 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     
     if(!cart.line_items) return 'Loading...'
     return (
-        <Container>
-           <div className={classes.toolbar} />
-           <Typography className={classes.title} variant="h4" gutterBottom>Shopping Cart</Typography> 
+        <>
+            <Navbar totalItems={totalItems} inMainPage={false} />
+            <div className={classes.toolbar} />
+            <Container>
+            <Typography className={classes.title} variant="h4" gutterBottom>Shopping Cart</Typography> 
             { !cart.line_items.length ? <EmptyCart /> : <FilledCart />}
-        </Container>
+            </Container>
+        </>
     )
 }
 

@@ -67,10 +67,14 @@ const App = () => {
     return (
         <Router>
             <div>
-                <Navbar totalItems={cart.total_items}  />
+                {/* <Navbar totalItems={cart.total_items}  /> */}
                 <Switch>
                     <Route exact path='/'>
-                        <Products products={products} onAddToCart={handleAddToCart} />
+                        <Products 
+                            products={products} 
+                            onAddToCart={handleAddToCart} 
+                            totalItems={cart.total_items}
+                        />
                     </Route>
                     <Route exact path='/cart'>
                         <Cart 
@@ -78,6 +82,7 @@ const App = () => {
                             handleUpdateCartQty={handleUpdateCartQty}
                             handleRemoveFromCart={handleRemoveFromCart}
                             handleEmptyCart={handleEmptyCart}
+                            totalItems={cart.total_items}
                         />
                     </Route>
                     <Route exact path='/checkout'>
@@ -85,7 +90,7 @@ const App = () => {
                             cart={cart} 
                             order={order} 
                             onCaptureCheckout={handleCaptureCheckout} 
-                            error={errorMessage} 
+                            error={errorMessage}
                         />
                     </Route>
                 </Switch>
