@@ -7,6 +7,22 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { ThemeProvider,createMuiTheme } from '@material-ui/core/styles';
 
 
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#000000',
+            dark: '#37474f',
+            light: '#fffff'
+        }
+    }
+    ,typography: {
+      fontFamily: [
+        'Lato',
+        'sans-serif',
+      ].join(','),
+    },});
+
+
 const App = () => {
     const [ products, setProducts ] = useState([]);
     const [cart, setCart] = useState({})
@@ -65,6 +81,7 @@ const App = () => {
 
 
     return (
+        <ThemeProvider theme={theme}>
         <Router>
             <div>
                 {/* <Navbar totalItems={cart.total_items}  /> */}
@@ -96,6 +113,7 @@ const App = () => {
                 </Switch>
             </div>
         </Router>
+        </ThemeProvider>
     )
 }
 

@@ -6,8 +6,8 @@ export default makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
-    paddingBottom: '50px'
+    padding: theme.spacing(5),
+    paddingBottom: '100px'
   },
   root: {
     flexGrow: 1,
@@ -20,14 +20,14 @@ export default makeStyles((theme) => ({
   supertitle: {
     fontWeight: 500,
     color: 'rgb(230,230,230)',
-    top: '70%',
+    top: '75%',
     right: '5%',
     position: 'absolute',
     textAlign: 'right'
   },
   cover: {
     backgroundImage: `url(${Image}) `,
-    backgroundColor: 'rgba(0,0,0,0.85)',
+    backgroundColor: 'rgba(0,0,0,0.75)',
     backgroundBlendMode: 'overlay',
     height: '100vh',
     backgroundAttachment: 'fixed',
