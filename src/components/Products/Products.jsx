@@ -17,12 +17,12 @@ const Products = ({ products, onAddToCart, totalItems }) => {
     
     return(
         <div>
-            {/* <div className={classes.toolbar} />                     */}
+            {/* <div className={classes.toolbar} /> */}
             <div className={classes.cover}>
                 <Navbar totalItems={totalItems} />
-                <div>
-                <Typography className={classes.supertitle} variant="h2" >Welcome to APO Shop</Typography>
-
+                <div className={classes.superTitle} >
+                    <Typography  variant="h2" >Welcome to APO Shop</Typography>
+                    <ArrowDownwardIcon className={classes.scrollDownIcon}  />        
                 </div>
             </div>
             <main className={classes.content}>

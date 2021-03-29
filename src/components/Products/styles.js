@@ -17,22 +17,29 @@ export default makeStyles((theme) => ({
     textAlign: 'center',
     marginBottom: '5%',
   },
-  supertitle: {
-    fontWeight: 500,
+  superTitle: {
+    fontWeight: 400,
     color: 'rgb(230,230,230)',
-    top: '75%',
-    right: '5%',
+    top: '65vh',
+    right: '5vw',
     position: 'absolute',
     textAlign: 'right'
+  },
+  scrollDownIcon: {
+    color: 'rgba(255,255,255, 0.4)',
+    marginTop: '15px',
+    marginRight: '30px'
   },
   cover: {
     backgroundImage: `url(${Image}) `,
     backgroundColor: 'rgba(0,0,0,0.75)',
     backgroundBlendMode: 'overlay',
     height: '100vh',
+    width: '100vw',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    display: 'relative'
   }
 }));
